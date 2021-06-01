@@ -21,7 +21,11 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+<<<<<<< HEAD
 def move(board, index, current_player)
+=======
+def move(board, index, current_player = "X")
+>>>>>>> 23af6998b5bb5763ca62a07df807bae70a1dfdf7
   board[index] = current_player
 end
 
@@ -38,13 +42,18 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index)
+>>>>>>> 23af6998b5bb5763ca62a07df807bae70a1dfdf7
     display_board(board)
   else
     turn(board)
   end
 end
 
+<<<<<<< HEAD
 def turn_count(board)
   turns = 0
   board.each do |move|
@@ -64,6 +73,8 @@ def current_player(board)
   end
 end
 
+=======
+>>>>>>> 23af6998b5bb5763ca62a07df807bae70a1dfdf7
 def won?(board)
   WIN_COMBINATIONS.each {|win_combo|
     index_0 = win_combo[0]
@@ -105,6 +116,7 @@ end
 
 def play(board)
   i = 0
+<<<<<<< HEAD
   until i == 9
   i += 1
   turn(board)
@@ -121,6 +133,12 @@ def play(board)
   else draw?(board)
     puts "Cat\'s Game!"
   end
+=======
+until i == 9
+  i += 1
+  turn(board)
+end
+>>>>>>> 23af6998b5bb5763ca62a07df807bae70a1dfdf7
 end
 
 def winner(board)
